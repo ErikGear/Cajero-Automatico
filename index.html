@@ -12,6 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@700&family=Staatliches&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
     <script src="./JavaScript/app.js"></script>
 </head>
 
@@ -21,18 +26,19 @@
         <form class="formulario" action="" method="post" target="_self">
             <fieldset>
                 <legend>Bienvenido !! Ingrese sus credenciales</legend>
-                div.contene
-                <label for="usuarios">Usuario</label>
-                <select name="usuarios" id="usuarios">
-                    <option value="Mali"></option>
-                    <option value="Gera"></option>
-                    <option value="Maui"></option>
-                    <option value="Erik"></option>
-                    <option value="John"></option>
-                    <option value="Alfredo"></option>
-                </select>
-                <label for="password">Contraseña</label>
-                <input id="password" type="password" required="true">
+                <div class="d-flex p-2 contenedor-campos">
+                    <label for="usuarios">Usuario</label>
+                    <select name="usuarios" id="usuarios">
+                        <option value="Mali">Mali</option>
+                        <option value="Gera">Gera</option>
+                        <option value="Maui">Maui</option>
+                        <option value="Erik">Erik</option>
+                        <option value="John">John</option>
+                        <option value="Alfredo">Alfredo</option>
+                    </select>
+                    <label for="password">Contraseña</label>
+                    <input id="password" type="password" required="true">
+                </div>
             </fieldset>
         </form>
     </main>
