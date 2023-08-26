@@ -1,5 +1,5 @@
 :root {
-    --colorPrimario: #cc0000;
+    --colorPrimario: #ffffff;
     --colorSecundario: rgb(17, 17, 17);
     
     --fuentePrincipal: 'Krub', sans-serif;
@@ -32,13 +32,28 @@ Empleado el selector Universal
 
 body {
     font-size: 16px; /* 10px = 1rem*/
+    background-image: url("../assets/images/bg-bank.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+}
+
+h2 {
+    font-family: var(--fuentePrincipal);
+    font-size: 3.2rem;
+}
+
+p {
+    margin-top: 0.5rem;
+    font-family: var(--fuentePrincipal);
 }
 
 /*Agregando estilos al formulario*/
 .formulario {
-    background-color: #f9f9f9;
+    background-color: rgba(0,0,0, .5);
     width: min(60rem, 100%);
-    margin: 0 auto;
+    margin: 5rem auto;
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -62,4 +77,32 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+/*Agregando estilos a las etiquetas*/
+.etiqueta {
+    font-family: var(--fuentePrincipal);
+    font-size: 400;
+    color: var(--colorPrimario)
+}
+
+/*Agregando estilos a los campos*/
+.campo {
+    display: block;
+    background-color: transparent;
+    /*
+    agregando separacione entre los campos
+    */
+    margin-bottom: 3rem;
+    
+    /*Tipografia de los campos*/
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    color: #ffffff;
+
+    /*Estilizando los bordes y retirando el otline*/
+    border: none;
+    border-bottom: 0.1rem solid var(--colorPrimario);
+    outline: none;
+}
+
 

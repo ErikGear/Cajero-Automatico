@@ -25,10 +25,13 @@
     <main>
         <form class="formulario" action="" method="post" target="_self">
             <fieldset>
-                <legend>Bienvenido !! Ingrese sus credenciales</legend>
+                <legend>
+                    <h2>¡Bienvenido!</h2>
+                    <p>Ingrese sus credenciales</p>
+                </legend>
                 <div class="d-flex p-2 contenedor-campos">
-                    <label for="usuarios">Usuario</label>
-                    <select name="usuarios" id="usuarios">
+                    <label class="form-label etiqueta" for="usuarios">Usuario</label>
+                    <select class="campo cuentas" name="usuarios" id="usuarios">
                         <option value="Mali">Mali</option>
                         <option value="Gera">Gera</option>
                         <option value="Maui">Maui</option>
@@ -36,8 +39,8 @@
                         <option value="John">John</option>
                         <option value="Alfredo">Alfredo</option>
                     </select>
-                    <label for="password">Contraseña</label>
-                    <input id="password" type="password" required="true">
+                    <label class="form-label etiqueta" for="password">Password</label>
+                    <input class="campo credencial" id="password" type="password" required="true">
                 </div>
             </fieldset>
         </form>
