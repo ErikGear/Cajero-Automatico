@@ -172,6 +172,7 @@ p {
     font-family: var(--fuentePrincipal);
     font-weight: bold;
 
+    text-decoration: none;
     text-align: center;
 
     padding: 1rem 3rem;
