@@ -92,10 +92,7 @@ p {
 
     width: 100%;
 
-    /*
-    agregando separacione entre los campos
-    */
-    margin-bottom: 3rem;
+   
     
     /*Tipografia de los campos*/
     font-family: var(--fuentePrincipal);
@@ -134,7 +131,7 @@ p {
     grid-template-rows: repeat(5, 1fr);
     gap: 1rem;
 
-    justify-content: center;
+    justify-content: baseline;
     align-items: center;
     
 }
@@ -142,8 +139,8 @@ p {
 /*Acomodando elementos en la rejilla*/
 .campo {
     grid-column: 2 / 3;
+    align-self: end;
 }
-
 .icon1 {
     grid-row: 2 / 3;
 }
@@ -158,9 +155,15 @@ p {
     grid-row: 4/5;
 }
 
-.etiqueta:nth-child(2) {
+.e1{
+    grid-row: 1 / 2;
+}
+
+.e2 {
     grid-row: 3 / 4;
 }
+
+
 
 /*Estilizando el boton de sig in*/
 .sign-in {
