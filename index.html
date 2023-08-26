@@ -22,29 +22,32 @@
 
 <body>
     <header>Banco</header>
-    <main>
-        <form class="formulario" action="" method="post" target="_self">
-            <fieldset>
-                <legend>
-                    <h2>¡Bienvenido!</h2>
-                    <p>Ingrese sus credenciales</p>
-                </legend>
-                <div class="d-flex p-2 contenedor-campos">
-                    <label class="form-label etiqueta" for="usuarios">Usuario</label>
-                    <select class="campo cuentas" name="usuarios" id="usuarios">
-                        <option value="Mali">Mali</option>
-                        <option value="Gera">Gera</option>
-                        <option value="Maui">Maui</option>
-                        <option value="Erik">Erik</option>
-                        <option value="John">John</option>
-                        <option value="Alfredo">Alfredo</option>
-                    </select>
-                    <label class="form-label etiqueta" for="password">Password</label>
-                    <input class="campo credencial" id="password" type="password" required="true">
-                </div>
-            </fieldset>
-        </form>
-    </main>
+    <div class="hero">
+        <main>
+            <form class="formulario" action="" method="post" target="_self">
+                <fieldset>
+                    <legend>
+                        <h2>¡Bienvenido!</h2>
+                        <p>Ingrese sus credenciales</p>
+                    </legend>
+                    <div class="d-flex p-2 contenedor-campos">
+                        <label class="form-label etiqueta" for="usuarios">Usuario</label>
+                        <select class="campo cuentas" name="usuarios" id="usuarios">
+                            <option class="cuenta" value="Mali">Mali</option>
+                            <option class="cuenta" value="Gera">Gera</option>
+                            <option class="cuenta" value="Maui">Maui</option>
+                            <option class="cuenta" value="Erik">Erik</option>
+                            <option class="cuenta" value="John">John</option>
+                            <option class="cuenta" value="Alfredo">Alfredo</option>
+                        </select>
+                        <label class="form-label etiqueta" for="password">Password</label>
+                        <input class="campo credencial" id="password" type="password" required="true">
+                        <input class="sign-in" type="submit" value="Sign in">
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+    </div>
 
     <footer></footer>
 </body>
