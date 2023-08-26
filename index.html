@@ -32,16 +32,22 @@
                     </legend>
                     <div class="d-flex p-2 contenedor-campos">
                         <label class="form-label etiqueta" for="usuarios">Usuario</label>
-                        <select class="campo cuentas" name="usuarios" id="usuarios">
-                            <option class="cuenta" value="Mali">Mali</option>
-                            <option class="cuenta" value="Gera">Gera</option>
-                            <option class="cuenta" value="Maui">Maui</option>
-                            <option class="cuenta" value="Erik">Erik</option>
-                            <option class="cuenta" value="John">John</option>
-                            <option class="cuenta" value="Alfredo">Alfredo</option>
-                        </select>
-                        <label class="form-label etiqueta" for="password">Password</label>
-                        <input class="campo credencial" id="password" type="password" required="true">
+                        <div class="bg-icon">
+                            <img src="./assets/icons/user.svg" alt="">
+                            <select class="campo cuentas" name="usuarios" id="usuarios">
+                                <option class="cuenta" value="Mali">Mali</option>
+                                <option class="cuenta" value="Gera">Gera</option>
+                                <option class="cuenta" value="Maui">Maui</option>
+                                <option class="cuenta" value="Erik">Erik</option>
+                                <option class="cuenta" value="John">John</option>
+                                <option class="cuenta" value="Alfredo">Alfredo</option>
+                            </select>
+                        </div>
+                        <div class="bg-icon">
+                            <img src="./assets/icons/password_icon.svg" alt="">
+                            <label class="form-label etiqueta" for="password">Password</label>
+                            <input class="campo credencial" id="password" type="password" required="true">
+                        </div>
                         <input class="sign-in" type="submit" value="Sign in">
                     </div>
                 </fieldset>
