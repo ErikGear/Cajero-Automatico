@@ -15,9 +15,9 @@ El objetivo del proyecto del proyecto es poner en practica los conocimientos de 
 - Ciclos
   - Ciclo FOR
   - Ciclos WHILE y DO WHILE
-  - Operadores de pre-incremento y pos-incremento **_(en caso de ser necesario)_**
+  - **_Operadores de pre-incremento y pos-incremento_**
 - Objeto Literal
-- Acceso al DOM **_(En caso de ser necesario)_**
+- **_Acceso al DOM _**
 
 Se agregara el link del proyecto una vez este concluido:
 [Cajero-Automático](#)
