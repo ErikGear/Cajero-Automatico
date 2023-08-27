@@ -2,7 +2,7 @@
 
 El objetivo del proyecto del proyecto es poner en practica los conocimientos de JavaScript Básicos:
 
-- Enlazar achivo Script al un archivo HTML
+- Enlazar achivo Script a un archivo HTML
 - Variables
   - Ambito de variables (Global y Local)
 - Operadores
