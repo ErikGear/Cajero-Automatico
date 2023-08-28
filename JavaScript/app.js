@@ -1,3 +1,5 @@
+"use strict";
+
 var cuentas = [
   {
     nombre: "Mali",
@@ -31,8 +33,33 @@ var cuentas = [
   }
 ];
 
-function validacionCredenciales() {
-  const usuarios = document.getElementById("usuarios");
-  const usuario = usuarios.value;
-  console.log(usuario);
+const usuarios = document.getElementById("usuarios");
+const password = document.getElementById("password");
+const boton = document.getElementById("check");
+
+/*Empleando Modularidad*/
+function busquedaUsuario(usuarios, pwd, usuario) {
+  const usuariosLength = usuarios.length;
+
+  for (let i = 0; i < usuariosLength; i++) {
+    const user = usuarios[i];
+    if (user.nombre === usuario && user.password === pwd) {
+      return i;
+    }
+  }
+  return -1;
 }
+
+const validacionCredenciales = function () {
+  const usuario = usuarios.value;
+  const pwd = password.value;
+  const validacion = busquedaUsuario(cuentas, pwd, usuario);
+
+  if (validacion >= 0) {
+     
+  } else {
+
+  }
+};
+
+boton.addEventListener("click", validacionCredenciales);
