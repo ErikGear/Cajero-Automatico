@@ -64,7 +64,7 @@ const validacionCredenciales = function (e) {
     paragraphWarning.innerHTML = warning;
     paragraphWarning.style.color = "#8ac926";
     //El siguiente metodo nos permitira cambiar de pagina HTML
-    window.location("../pages/usuario.html");
+    window.location = "../pages/usuario.html";
   } else {
     warning += "Credenciales invalidas";
     paragraphWarning.innerHTML = warning;
