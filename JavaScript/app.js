@@ -50,15 +50,21 @@ function busquedaUsuario(usuarios, pwd, usuario) {
   return -1;
 }
 
-const validacionCredenciales = function () {
+const validacionCredenciales = function (e) {
+  e.preventDefault();
+  const paragraphWarning = document.getElementById("warning");
+  paragraphWarning.value = "";
   const usuario = usuarios.value;
   const pwd = password.value;
   const validacion = busquedaUsuario(cuentas, pwd, usuario);
+  let warning = "";
 
   if (validacion >= 0) {
-     
+    warning += "Enviado"
+    paragraphWarning.innerHTML = warning;
   } else {
-
+    warning += "Credenciales invalidas"
+    paragraphWarning.innerHTML = warning;
   }
 };
 
