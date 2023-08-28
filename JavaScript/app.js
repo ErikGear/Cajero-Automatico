@@ -36,6 +36,7 @@ var cuentas = [
 const usuarios = document.getElementById("usuarios");
 const password = document.getElementById("password");
 const boton = document.getElementById("check");
+const form = document.getElementById("form");
 
 /*Empleando Modularidad*/
 function busquedaUsuario(usuarios, pwd, usuario) {
@@ -53,18 +54,18 @@ function busquedaUsuario(usuarios, pwd, usuario) {
 const validacionCredenciales = function (e) {
   e.preventDefault();
   const paragraphWarning = document.getElementById("warning");
-  paragraphWarning.value = "";
   const usuario = usuarios.value;
   const pwd = password.value;
   const validacion = busquedaUsuario(cuentas, pwd, usuario);
   let warning = "";
 
   if (validacion >= 0) {
-    warning += "Enviado"
+    warning += "Enviado";
     paragraphWarning.innerHTML = warning;
   } else {
-    warning += "Credenciales invalidas"
+    warning += "Credenciales invalidas";
     paragraphWarning.innerHTML = warning;
+    form.reset();
   }
 };
 
