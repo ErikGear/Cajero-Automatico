@@ -203,5 +203,7 @@ p {
     text-align: center;
     font-family: 'Outfit', sans-serif;
     font-weight: bold;
+    letter-spacing: 0.5rem;
+    word-spacing: 1rem;
 }
 
