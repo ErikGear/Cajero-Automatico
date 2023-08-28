@@ -199,3 +199,9 @@ p {
     align-items: center;
 }
 
+#warning {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+}
+
