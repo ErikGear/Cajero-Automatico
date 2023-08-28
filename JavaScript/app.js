@@ -62,11 +62,13 @@ const validacionCredenciales = function (e) {
   if (validacion >= 0) {
     warning += "Enviado";
     paragraphWarning.innerHTML = warning;
+    paragraphWarning.style.color = "#8ac926";
     //El siguiente metodo nos permitira cambiar de pagina HTML
     window.location("../pages/usuario.html");
   } else {
     warning += "Credenciales invalidas";
     paragraphWarning.innerHTML = warning;
+    paragraphWarning.style.color = "#e71d36";
     form.reset();
   }
 };
