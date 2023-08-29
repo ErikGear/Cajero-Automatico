@@ -1,0 +1,28 @@
+html {
+    font-size: 62.5%;
+
+    /*Este codigo va a solicionar los problemas del BoxModel*/
+    box-sizing: border-box;
+
+    /*
+    Estamos definiendo el scroll en nuetra pagina web, en el eje de las Y,
+    es decir, scroll de forma vertical, podemos hacer el caso contrario en el
+    eje de la X, para realizar scroll horizontal
+
+    el valor de "madatory" nos ayuda a hacer scroll, de una forma mas rapida,
+    tambien podemos emplear el valor de "proximity", esto hara que el scroll sea mas lento.
+    */
+    scroll-snap-type: y mandatory;
+}
+
+/*
+Empleado el selector Universal
+- Hack para solucionar los problemas del BoxModel
+*/
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px; /* 10px = 1rem*/
+}
