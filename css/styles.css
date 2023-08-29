@@ -39,6 +39,17 @@ body {
     background-size: cover;
 }
 
+.titleIndex {
+    font-family: 'Oleo Script', cursive;
+    color: var(--colorPrimario);
+    text-align: center;
+    word-spacing: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 4.2rem;
+
+    background-color: rgba(0,0,0, .5);
+}
+
 h2 {
     font-family: var(--fuentePrincipal);
     font-size: 3.2rem;
