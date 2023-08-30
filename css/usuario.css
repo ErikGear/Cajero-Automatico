@@ -1,5 +1,6 @@
 :root {
-    --fuentePrincipal: font-family: 'Outfit', sans-serif;
+    --fuentePrincipal:'Outfit', sans-serif;
+    --colorPrimario: #ffffff;
 }
 
 html {
@@ -29,4 +30,12 @@ Empleado el selector Universal
 
 body {
     font-size: 16px; /* 10px = 1rem*/
+}
+
+h1 {
+    font-family: var(--fuentePrincipal);
+    font-size: 5.2;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    color: var(--colorPrimario);
 }
