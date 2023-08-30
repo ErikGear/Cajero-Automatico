@@ -1,3 +1,7 @@
+:root {
+    --fuentePrincipal: font-family: 'Outfit', sans-serif;
+}
+
 html {
     font-size: 62.5%;
 
