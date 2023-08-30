@@ -45,6 +45,15 @@ h1 {
     text-align: center;
 }
 
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 3rem;
+    
+}
+
 .logo-container {
     display: flex;
     justify-content: center;
@@ -52,6 +61,5 @@ h1 {
 }
 
 .logo {
-    display: inline-block;
     object-fit: cover;
 }
