@@ -32,10 +32,26 @@ body {
     font-size: 16px; /* 10px = 1rem*/
 }
 
+header {
+    background-color: #e63946;
+}
+
 h1 {
     font-family: var(--fuentePrincipal);
     font-size: 5.2;
     text-transform: uppercase;
     letter-spacing: 1rem;
     color: var(--colorPrimario);
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    object-fit: cover;
 }
