@@ -48,7 +48,6 @@ const sesion = document.getElementById("salir");
 const mensaje = document.getElementById("mensaje");
 let validacionUsuario = null;
 
-
 /*Empleando Modularidad*/
 function busquedaUsuario(usuarios, pwd, usuario) {
   const usuariosLength = usuarios.length;
@@ -57,13 +56,11 @@ function busquedaUsuario(usuarios, pwd, usuario) {
     const user = usuarios[i];
     if (user.nombre === usuario && user.password === pwd) {
       validacionUsuario = i;
-      console.log(validacionUsuario);
       return i;
     }
   }
   return -1;
 }
-
 
 const validacionCredenciales = function (e) {
   e.preventDefault();
@@ -78,6 +75,7 @@ const validacionCredenciales = function (e) {
     warning += "Enviado";
     paragraphWarning.textContent = warning;
     paragraphWarning.style.color = "#8ac926";
+    monto.style.display = "block";
     form.reset();
 
     datos.style.display = "block";
@@ -91,36 +89,38 @@ const validacionCredenciales = function (e) {
 
 boton.addEventListener("click", validacionCredenciales);
 
-
-
-function consultarSaldo(e){
+function consultarSaldo(e) {
   e.preventDefault();
-  mensaje.style.display= "block";
+  mensaje.style.display = "block";
   mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo} Pesos`;
 }
 function ingresarSaldo(e) {
   e.preventDefault();
+  const montoIngresado = parseFloat(monto.value);
   if (cuentas[validacionUsuario].saldo >= 990.0) {
-    mensaje.style.display= "block";
+    mensaje.style.display = "block";
     mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo} el cual es el monto maximo permitido`;
-  } else {
+  } else if (montoIngresado > 0) {
     mensaje.textContent = "";
-    monto.style.display = "block";
-    mensaje.style.display= "block";
-    cuentas[validacionUsuario].saldo += monto.value;
+    mensaje.style.display = "block";
+    cuentas[validacionUsuario].saldo += parseFloat(monto.value);
+    mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo}`;
+  } else {
     mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo}`;
   }
 }
 function retirarSaldo(e) {
   e.preventDefault();
+  const montoIngresado = parseFloat(monto.value);
   if (cuentas[validacionUsuario].saldo == 10) {
-    mensaje.style.display= "block";
+    mensaje.style.display = "block";
     mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo} el cual es el saldo minimo`;
-  } else {
+  } else if (montoIngresado > 0) {
     mensaje.textContent = "";
-    monto.style.display= "block";
-    cuentas[validacionUsuario].saldo -= monto.value;
-    mensaje.style.display= "block";
+    cuentas[validacionUsuario].saldo -= montoIngresado;
+    mensaje.style.display = "block";
+    mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo}`;
+  } else {
     mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo}`;
   }
 }
