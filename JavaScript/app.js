@@ -1,3 +1,4 @@
+"use strict";
 var cuentas = [
   {
     nombre: "Mali",
@@ -36,14 +37,16 @@ const password = document.getElementById("password");
 const boton = document.getElementById("check");
 const form = document.getElementById("form");
 const datos = document.getElementById("datos");
+datos.style.display = "none";
 
 const monto = document.getElementById("monto");
+monto.style.display = "none";
 const saldo = document.getElementById("consultar");
 const ingreso = document.getElementById("ingresar");
 const retiro = document.getElementById("retirar");
 const sesion = document.getElementById("salir");
 const mensaje = document.getElementById("mensaje");
-var validacionUsuario = 0;
+let validacionUsuario = null;
 
 
 /*Empleando Modularidad*/
@@ -53,6 +56,8 @@ function busquedaUsuario(usuarios, pwd, usuario) {
   for (let i = 0; i < usuariosLength; i++) {
     const user = usuarios[i];
     if (user.nombre === usuario && user.password === pwd) {
+      validacionUsuario = i;
+      console.log(validacionUsuario);
       return i;
     }
   }
@@ -70,7 +75,6 @@ const validacionCredenciales = function (e) {
   let warning = "";
 
   if (validacion >= 0) {
-    validacionUsuario = validacion;
     warning += "Enviado";
     paragraphWarning.textContent = warning;
     paragraphWarning.style.color = "#8ac926";
@@ -88,33 +92,41 @@ const validacionCredenciales = function (e) {
 boton.addEventListener("click", validacionCredenciales);
 
 
-function consultarSaldo(){
+
+function consultarSaldo(e){
+  e.preventDefault();
   mensaje.style.display= "block";
-  mensaje.textContent = cuentas[validacionUsuario];
+  mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo} Pesos`;
 }
-function ingresarSaldo() {
+function ingresarSaldo(e) {
+  e.preventDefault();
   if (cuentas[validacionUsuario].saldo >= 990.0) {
     mensaje.style.display= "block";
     mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo} el cual es el monto maximo permitido`;
   } else {
+    mensaje.textContent = "";
     monto.style.display = "block";
-    cuentas[validacionUsuario].saldo += monto.value;
     mensaje.style.display= "block";
+    cuentas[validacionUsuario].saldo += monto.value;
     mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo}`;
   }
 }
-function retirarSaldo() {
+function retirarSaldo(e) {
+  e.preventDefault();
   if (cuentas[validacionUsuario].saldo == 10) {
     mensaje.style.display= "block";
     mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo} el cual es el saldo minimo`;
   } else {
+    mensaje.textContent = "";
     monto.style.display= "block";
     cuentas[validacionUsuario].saldo -= monto.value;
     mensaje.style.display= "block";
     mensaje.textContent = `dispone de ${cuentas[validacionUsuario].saldo}`;
   }
 }
-function cerrarSesion() {
+function cerrarSesion(e) {
+  e.preventDefault();
+  mensaje.textContent = "";
   datos.style.display = "none";
 }
 
