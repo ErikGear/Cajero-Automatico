@@ -19,5 +19,5 @@ El objetivo del proyecto del proyecto es poner en practica los conocimientos de 
 - **_Objeto Literal_**
 - **_Acceso al DOM_**
 
-Se agregara el link del proyecto una vez este concluido:
+Se agregara el link del proyecto concluido:
 [Cajero-Automático](https://erikgear.github.io/Cajero-Automatico/)
