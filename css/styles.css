@@ -219,3 +219,72 @@ p {
     word-spacing: 1rem;
 }
 
+
+.datos fieldset {
+    border: none;
+}
+
+.datos legend {
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    column-gap: 1.5rem;
+
+    margin-top: 2rem;
+}
+
+.monto {
+    font-family: var(--fuentePrincipal);
+    padding: 1.2rem;
+    outline: none;
+    border: 0.2rem solid #dddfe1;
+    border-radius: 0.5rem;
+}
+
+.monto::-webkit-inner-spin-button,
+.monto::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+}
+.monto:hover {
+    cursor: text;
+}
+
+
+.boton {
+    color: var(--colorPrimario);
+    font-family: var(--fuentePrincipal);
+    border-radius: 0.5rem;
+    border: 0.1rem solid #f8f9fa;
+    padding: 1rem;
+}
+
+.saldo{
+    background-color: #f0c808;
+}
+.ingresar{
+    background-color: #55a630;
+}
+.retirar {
+    background-color: #e5383b;
+}
+.sesion {
+    background-color: #14213d;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
